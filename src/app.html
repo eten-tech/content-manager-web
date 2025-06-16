@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <link rel="icon" href="%sveltekit.assets%/favicon.png" />
         <meta name="viewport" content="width=device-width" />
-        <style data-name="biblionexus-loader-style">
+        <style data-name="aquifer-loader-style">
             #svelte-loading-spinner {
                 color: #101828;
                 display: flex;
@@ -31,12 +31,12 @@
             }
         </style>
         <script>
-            const darkModeKey = 'BIBLIO_NEXUS_DARK_MODE';
+            const darkModeKey = 'AQUIFER_DARK_MODE';
             const isDarkMode = localStorage.getItem(darkModeKey) === 'true';
 
             document.addEventListener('DOMContentLoaded', () => {
                 const styleSheet = Array.from(document.styleSheets).find(
-                    (s) => s.ownerNode?.getAttribute?.('data-name') === 'biblionexus-loader-style'
+                    (s) => s.ownerNode?.getAttribute?.('data-name') === 'aquifer-loader-style'
                 );
 
                 if (styleSheet && isDarkMode) {
@@ -60,7 +60,7 @@
             document.getElementById('svelte-app-div').style.display = 'contents';
 
             const styleSheet = Array.from(document.styleSheets).find(
-                (s) => s.ownerNode?.getAttribute?.('data-name') === 'biblionexus-loader-style'
+                (s) => s.ownerNode?.getAttribute?.('data-name') === 'aquifer-loader-style'
             );
 
             if (styleSheet) {
