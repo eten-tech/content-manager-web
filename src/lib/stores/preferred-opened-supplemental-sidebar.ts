@@ -2,7 +2,7 @@ import { browser } from '$app/environment';
 import { OpenedSupplementalSideBar } from '$lib/types/resources';
 import { writable } from 'svelte/store';
 
-const sidepanelSettingString = 'biblionexus_sidepanel_setting';
+const sidepanelSettingString = 'aquifer_sidepanel_setting';
 let savedSidePanelSetting = OpenedSupplementalSideBar.None;
 
 if (browser) {

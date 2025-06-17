@@ -1,7 +1,7 @@
 import { writable } from 'svelte/store';
 import { browser } from '$app/environment';
 
-const darkModeLocalStorageString = 'BIBLIO_NEXUS_DARK_MODE';
+const darkModeLocalStorageString = 'AQUIFER_DARK_MODE';
 
 export const sideBarHiddenOnPage = writable(false);
 

@@ -1228,9 +1228,9 @@ ansi-styles@^5.0.0:
   resolved "https://registry.npmjs.org/ansi-styles/-/ansi-styles-5.2.0.tgz"
   integrity sha512-Cxwpt2SfTzTtXcfOlzGEee8O+c+MmUgGrNiBcXnuWxuFJHe6a5Hz7qwhwe5OgaSYI0IJvkLqWX1ASG+cJOkEiA==
 
-"aquifer-tiptap@https://github.com/BiblioNexusStudio/aquifer-tiptap#1.0.11":
+"aquifer-tiptap@https://github.com/eten-tech/aquifer-tiptap#1.0.11":
   version "1.0.0"
-  resolved "https://github.com/BiblioNexusStudio/aquifer-tiptap#03bab9470bd4a4b69c6ce60b365a8b3f58708778"
+  resolved "https://github.com/eten-tech/aquifer-tiptap#03bab9470bd4a4b69c6ce60b365a8b3f58708778"
   dependencies:
     "@tiptap/core" "^2.8.0"
     "@tiptap/extension-blockquote" "^2.8.0"
@@ -1745,9 +1745,9 @@ eslint-config-prettier@^8.5.0:
   resolved "https://registry.npmjs.org/eslint-config-prettier/-/eslint-config-prettier-8.10.0.tgz"
   integrity sha512-SM8AMJdeQqRYT9O9zguiruQZaN7+z+E4eAP9oiLNGKMtomwaB1E9dcgUD6ZAn/eQAb52USbvezbiljfZUhbJcg==
 
-"eslint-plugin-svelte-translate-check@https://github.com/BiblioNexusStudio/eslint-plugin-svelte-translate-check":
+"eslint-plugin-svelte-translate-check@https://github.com/eten-tech/eslint-plugin-svelte-translate-check":
   version "1.0.0"
-  resolved "https://github.com/BiblioNexusStudio/eslint-plugin-svelte-translate-check#1952c2c18d99e4c9b578802f4e0004295beba848"
+  resolved "https://github.com/eten-tech/eslint-plugin-svelte-translate-check#a854b71f5d22c6652558cedb0a78e262cd2a3605"
 
 eslint-plugin-svelte@^2.45.1:
   version "2.46.1"
@@ -2133,9 +2133,9 @@ html-encoding-sniffer@^3.0.0:
   dependencies:
     whatwg-encoding "^2.0.0"
 
-"htmldiff-ts@https://github.com/BiblioNexusStudio/htmldiff-ts#1.0.6":
+"htmldiff-ts@https://github.com/eten-tech/htmldiff-ts#1.0.6":
   version "1.0.0"
-  resolved "https://github.com/BiblioNexusStudio/htmldiff-ts#957ad928d9309a1aaff3db25384aa190b45e3742"
+  resolved "https://github.com/eten-tech/htmldiff-ts#957ad928d9309a1aaff3db25384aa190b45e3742"
 
 http-proxy-agent@^5.0.0:
   version "5.0.0"

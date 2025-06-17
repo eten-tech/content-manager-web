@@ -1,5 +1,5 @@
-# Creates a Hotfix PR using the BiblioNexusStudio/github-actions/create-hotfix action
-# See https://github.com/BiblioNexusStudio/github-actions for docs
+# Creates a Hotfix PR using the eten-tech/github-actions/create-hotfix action
+# See https://github.com/eten-tech/github-actions for docs
 
 name: Create Hotfix
 
@@ -18,7 +18,7 @@ jobs:
     create-hotfix:
         runs-on: ubuntu-latest
         steps:
-            - uses: BiblioNexusStudio/github-actions/create-hotfix@master
+            - uses: eten-tech/github-actions/create-hotfix@master
               with:
                   prod_environment: prod
                   commit_id: ${{ github.event.inputs.commit_id }}

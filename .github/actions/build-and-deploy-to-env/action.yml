@@ -32,7 +32,7 @@ runs:
         - name: Notify Slack deploy is starting
           id: slack-notify
           if: ${{ !contains(inputs.environment, 'dev') }}
-          uses: BiblioNexusStudio/github-action-slack-notify-build@main
+          uses: eten-tech/github-action-slack-notify-build@main
           with:
               channel_id: C05UPTGQGP9
               status: RUNNING
@@ -73,7 +73,7 @@ runs:
               output_location: ''
         - name: Notify Slack deploy status
           if: ${{ !cancelled() && !contains(inputs.environment, 'dev') }}
-          uses: BiblioNexusStudio/github-action-slack-notify-build@main
+          uses: eten-tech/github-action-slack-notify-build@main
           with:
               channel_id: C05UPTGQGP9
               status: ${{ github.action_status == 'failure' && 'FAILURE' || 'SUCCESS' }}
