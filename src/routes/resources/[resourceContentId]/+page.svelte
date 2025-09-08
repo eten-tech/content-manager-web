@@ -37,7 +37,8 @@
     import { get, type Readable, type Writable } from 'svelte/store';
     import ExitButton from '$lib/components/ExitButton.svelte';
     import CurrentTranslations from '$lib/components/resources/menus/CurrentTranslations.svelte';
-    import Related from '$lib/components/resources/menus/Related.svelte';
+    import WorksCited from '$lib/components/resources/menus/WorksCited.svelte';
+    import CitedBy from '$lib/components/resources/menus/CitedBy.svelte';
     import ContentArea from '$lib/components/resources/ContentArea.svelte';
     import Select from '$lib/components/Select.svelte';
     import InlineComment from '$lib/components/comments/InlineComment.svelte';
@@ -938,14 +939,14 @@
                     <CurrentTranslations
                         currentResourceId={resourceContent.resourceContentId}
                         languages={data.languages}
-                        translations={resourceContent.contentTranslations}
                         project={resourceContent.project}
                         englishTranslation={englishContentTranslation}
                         {canCreateTranslation}
                         openModal={openAddTranslationModal}
                     />
                 {/if}
-                <Related relatedContent={resourceContent.associatedResources} />
+                <WorksCited currentResourceId={resourceContent.resourceContentId} />
+                <CitedBy currentResourceId={resourceContent.resourceContentId} />
             </div>
 
             {#if resourceContent.mediaType !== MediaTypeEnum.audio}
