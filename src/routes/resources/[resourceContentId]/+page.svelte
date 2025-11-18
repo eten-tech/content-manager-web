@@ -283,7 +283,10 @@
             resourceContent.isDraft &&
             (resourceContent.status === ResourceContentStatusEnum.TranslationAiDraftComplete ||
                 resourceContent.status === ResourceContentStatusEnum.TranslationEditorReview ||
-                resourceContent.status === ResourceContentStatusEnum.TranslationCompanyReview)
+                resourceContent.status === ResourceContentStatusEnum.TranslationCompanyReview ||
+                resourceContent.status === ResourceContentStatusEnum.AquiferizeAiDraftComplete ||
+                resourceContent.status === ResourceContentStatusEnum.AquiferizeEditorReview ||
+                resourceContent.status === ResourceContentStatusEnum.AquiferizeCompanyReview)
     );
 
     let canSetStatusCompleteNotApplicable = $derived(
