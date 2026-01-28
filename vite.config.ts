@@ -11,10 +11,4 @@ export default defineConfig({
     build: {
         sourcemap: process.env.INCLUDE_SOURCE_MAPS === 'true',
     },
-    test: {
-        globals: true,
-        environment: 'jsdom',
-        setupFiles: ['src/setup-tests.ts'],
-        include: ['src/**/*.{test,spec}.{js,ts}'],
-    },
 });
