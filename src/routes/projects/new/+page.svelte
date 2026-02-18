@@ -16,10 +16,13 @@
 
     let { data }: Props = $props();
 
-    const { languages, users, companies } = data;
+    const { languages, users, companies } = $derived(data);
 
     let title = $state('');
-    let sourceLanguageId: number | null = $state((languages || []).find((l) => l.iso6393Code === 'eng')?.id ?? null);
+    let sourceLanguageId: number | null = $state(null);
+    $effect(() => {
+        sourceLanguageId = (languages || []).find((l) => l.iso6393Code === 'eng')?.id ?? null;
+    });
     let targetLanguageId: number | null = $state(null);
     let projectManagerUserId: number | null = $state(null);
     let companyId: number | null = $state(null);

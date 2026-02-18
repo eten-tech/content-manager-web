@@ -31,9 +31,9 @@
         isAlreadyTranslated,
     }: Props = $props();
 
-    const { parentResources } = data;
+    const { parentResources } = $derived(data);
 
-    let bibleBooks = data.bibleBooks;
+    let bibleBooks = $derived(data.bibleBooks);
     let resourceTypeId: string | null = $state(null);
     let bookCode: string | null = $state(null);
     let chaptersString = $state('');

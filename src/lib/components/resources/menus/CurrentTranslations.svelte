@@ -29,7 +29,7 @@
 
     let numberOfTranslations = $derived(translations.length);
 
-    const mappedTranslations = sortByKey(
+    const mappedTranslations = $derived(sortByKey(
         translations.map((translation) => ({
             languageName: languages.find((x) => x.id === translation.languageId)?.englishDisplay ?? '',
             status: translation.status,
@@ -37,11 +37,11 @@
             resourceContentStatus: translation.resourceContentStatus as ResourceContentStatusEnum,
         })),
         'languageName'
-    )!;
+    )!);
 
-    const currentResource = mappedTranslations.find((x) => x.contentId === currentResourceId);
+    const currentResource = $derived(mappedTranslations.find((x) => x.contentId === currentResourceId));
 
-    const filteredMappedTranslations = mappedTranslations.filter((x) => x.contentId !== currentResourceId);
+    const filteredMappedTranslations = $derived(mappedTranslations.filter((x) => x.contentId !== currentResourceId));
 </script>
 
 <div class="dropdown ms-2">

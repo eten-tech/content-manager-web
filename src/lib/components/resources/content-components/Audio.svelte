@@ -17,14 +17,14 @@
 
     let { resourceContent }: Props = $props();
 
-    const versions = buildVersionSelectOptions(resourceContent);
-    const audioContent = resourceContent.content as AudioContentItem;
+    const versions = $derived(buildVersionSelectOptions(resourceContent));
+    const audioContent = $derived(resourceContent.content as AudioContentItem);
 
     let hasSteps = $state(false);
     let stepHasAudio = $state(false);
     let playlist: AudioPlaylist = createAudioPlaylistContext();
     let selectedStepNumber = $state(1);
-    let selectedVersionNumber = $state(
+    let selectedVersionNumber = $derived(
         versions.find((version) => version.id === resourceContent.resourceContentId)?.version || 1
     );
     let versionAudioContents: Version | null = $state(null);

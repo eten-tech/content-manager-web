@@ -39,11 +39,11 @@
         isMacOS,
     }: Props = $props();
 
-    const commentThreads = commentStores.commentThreads;
+    const commentThreads = $derived(commentStores.commentThreads);
 
-    const audioIsAvailable = !!(
+    const audioIsAvailable = $derived(!!(
         resourceContent.hasAudio && resourceContent.status === ResourceContentStatusEnum.Complete
-    );
+    ));
 
     onMount(() => {
         if (sidebarHistoryAvailable && resourceContent.mediaType === MediaTypeEnum.text) {

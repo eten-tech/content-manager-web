@@ -70,9 +70,9 @@
 
     let assignedContents = $derived(data.publisherDashboard!.assignedResourceContent);
     let allReviewPendingContents = $derived(data.publisherDashboard!.reviewPendingResourceContent);
-    let assignedProjects = data.publisherDashboard!.assignedProjects;
-    let notApplicableContent = data.publisherDashboard!.notApplicableContent;
-    let flattenedNotificationContent = data.publisherDashboard!.flattenedNotificationsContent;
+    let assignedProjects = $derived(data.publisherDashboard!.assignedProjects);
+    let notApplicableContent = $derived(data.publisherDashboard!.notApplicableContent);
+    let flattenedNotificationContent = $derived(data.publisherDashboard!.flattenedNotificationsContent);
     let communityPendingContents = $derived.by(() => {
         return allReviewPendingContents.filter((item) => {
             return item.reviewLevel === ResourceContentVersionReviewLevel.community;

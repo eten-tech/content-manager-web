@@ -41,10 +41,10 @@
 
     let outerDiv: HTMLDivElement | null = $state(null);
     let isCommentBoxOpen = false;
-    const { createNewThread } = commentStores;
 
-    const showMachineTranslationRating =
-        canEdit && resourceContent.status === ResourceContentStatusEnum.TranslationEditorReview;
+    const showMachineTranslationRating = $derived(
+        canEdit && resourceContent.status === ResourceContentStatusEnum.TranslationEditorReview
+    );
 
     let widthRequired = $derived(
         (canEditBibleReferences ? 30 : 0) +
@@ -67,7 +67,7 @@
                 let tempSpan = document.getElementById('thread-temp');
                 tempSpan?.click();
 
-                $createNewThread = (created: boolean, threadId: number, hasError: boolean) => {
+                commentStores.createNewThread.set((created: boolean, threadId: number, hasError: boolean) => {
                     isCommentBoxOpen = false;
                     editor.chain().setTextSelection(selectionRange).focus().unsetComments().run();
                     if (created) {
@@ -80,11 +80,11 @@
                     }
 
                     if (!hasError) {
-                        $createNewThread = () => {
+                        commentStores.createNewThread.set(() => {
                             return;
-                        };
+                        });
                     }
-                };
+                });
             },
             isActive: editor.isActive('comments'),
             disabled:

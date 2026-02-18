@@ -16,9 +16,15 @@
 
     let { data }: Props = $props();
 
-    let projectResponse = data.projectResponse;
-    $project = projectResponse;
-    $users = data.users;
+    let projectResponse = $derived(data.projectResponse);
+    $effect(() => {
+        $project = projectResponse;
+    });
+
+    let usersDerived = $derived(data.users);
+    $effect(() => {
+        $users = usersDerived;
+    });
 
     let disabledStartButton = $derived(
         $project?.projectManager &&
