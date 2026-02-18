@@ -9,7 +9,7 @@
 
     let { canOnlyViewProjectsInCompany }: Props = $props();
 
-    let tabs = $state(
+    let tabs = $derived(
         !canOnlyViewProjectsInCompany
             ? [
                   { name: 'Overview', current: true },

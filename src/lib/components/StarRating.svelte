@@ -9,7 +9,7 @@
 
     let { rating = 0, callback }: Props = $props();
 
-    let starHighlightPosition = $state(rating - 1);
+    let starHighlightPosition = $derived(rating - 1);
 
     // this is needed for if the component exists in multiple spots on the page (as the case with MachineTranslationRating.svelte)
     $effect(() => {

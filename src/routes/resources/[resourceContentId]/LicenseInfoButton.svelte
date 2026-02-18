@@ -8,9 +8,9 @@
 
     let { resourceContent }: Props = $props();
 
-    let licenseInfo = resourceContent.parentResourceLicenseInfo!;
-    let englishLicenses = filterBoolean(licenseInfo.licenses.map(({ eng }) => eng));
-    let englishLicensesForAdaptation = englishLicenses.filter(({ name }) => name.toLowerCase() !== 'public domain');
+    let licenseInfo = $derived(resourceContent.parentResourceLicenseInfo!);
+    let englishLicenses = $derived(filterBoolean(licenseInfo.licenses.map(({ eng }) => eng)));
+    let englishLicensesForAdaptation = $derived(englishLicenses.filter(({ name }) => name.toLowerCase() !== 'public domain'));
     let container: HTMLDivElement;
     let show = $state(false);
 

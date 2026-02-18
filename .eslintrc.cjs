@@ -35,6 +35,5 @@ module.exports = {
         'svelte-translate-check/missing-translations': 'error',
         '@typescript-eslint/no-non-null-assertion': 'off',
         'svelte/valid-compile': 'off',
-        'svelte/no-unused-svelte-ignore': 'off',
     },
 };

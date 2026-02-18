@@ -24,7 +24,7 @@
     let errorModalDescription: string | null = $state(null);
     let errorModalHeader = $state('');
     let isModalOpen = $state(false);
-    let users = $state(data.users);
+    let users = $derived(data.users);
     let companies = $derived(data.companies);
     let roles = $derived(data.roles);
     let languages = $derived(data.languages);

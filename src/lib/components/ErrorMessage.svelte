@@ -31,7 +31,7 @@
     let buttonText = $state('');
     let errorMessage = $state('');
     let didNotRedirect = $state(false);
-    const error = uncastError as Error | FetchError | ApiError | TokenMissingError | AuthUninitializedError;
+    const error = $derived(uncastError as Error | FetchError | ApiError | TokenMissingError | AuthUninitializedError);
 
     function handleButtonClick() {
         if (isApiErrorWithStatus(error, 429)) {

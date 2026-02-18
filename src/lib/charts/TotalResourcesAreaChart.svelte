@@ -15,7 +15,7 @@
     let { totalsByMonth, resourcesByLanguage, resourcesByType, selectedLanguages, selectedResource }: Props = $props();
 
     const defaultSelection = 'default';
-    const months = totalsByMonth.map((item) => item.monthAbbreviation);
+    const months = $derived(totalsByMonth.map((item) => item.monthAbbreviation));
 
     let chart: Chart | undefined;
 
@@ -91,7 +91,7 @@
         }
     };
 
-    const chartData: ChartConfiguration = {
+    const chartData: ChartConfiguration = $derived({
         type: 'line',
         data: {
             labels: months,
@@ -134,7 +134,7 @@
                 },
             },
         },
-    };
+    });
 
     onMount(() => {
         let canvas = document?.getElementById('totalResourcesAreaChart') as HTMLCanvasElement | undefined;

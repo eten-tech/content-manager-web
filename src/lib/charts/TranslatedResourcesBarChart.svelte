@@ -17,7 +17,7 @@
 
     const defaultSelection = 'default';
 
-    const months = totalsByMonth.map((item) => item.monthAbbreviation);
+    const months = $derived(totalsByMonth.map((item) => item.monthAbbreviation));
 
     let languagesToColors: { color: string; language: string }[] | undefined = undefined;
 
@@ -87,7 +87,7 @@
         }
     };
 
-    const chartData: ChartConfiguration = {
+    const chartData: ChartConfiguration = $derived({
         type: 'bar',
         data: {
             labels: months,
@@ -137,7 +137,7 @@
             // @ts-expect-error this barPercentage is valid but missing from the ChartJS types
             barPercentage: 0.5,
         },
-    };
+    });
 
     onMount(() => {
         let canvas = document?.getElementById('areaChartCanvas') as HTMLCanvasElement | undefined;
