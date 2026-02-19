@@ -34,7 +34,5 @@ module.exports = {
         '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
         'svelte-translate-check/missing-translations': 'error',
         '@typescript-eslint/no-non-null-assertion': 'off',
-        'svelte/valid-compile': 'off',
-        'svelte/no-unused-svelte-ignore': 'off',
     },
 };

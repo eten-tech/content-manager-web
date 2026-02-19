@@ -12,6 +12,3 @@ node_modules
 pnpm-lock.yaml
 package-lock.json
 yarn.lock
-
-# temporarily ignore svelte files until prettier supports svelte 5
-*.svelte
