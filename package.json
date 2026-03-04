@@ -30,7 +30,7 @@
         "chart.js": "^4.4.0",
         "daisyui": "^5.0.0",
         "htmldiff-ts": "https://github.com/eten-tech/htmldiff-ts#1.0.6",
-        "svelte": "^5.0.0",
+        "svelte": "^5.53.5",
         "svelte-awesome": "^3.3.5",
         "svelte-i18n": "^3.7.0",
         "tailwindcss": "^4.0.12",
