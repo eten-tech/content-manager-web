@@ -7,7 +7,7 @@ import { get } from 'svelte/store';
 export const load: PageLoad = async ({ parent }) => {
     await parent();
 
-    if (!get(currentUser)?.roles.includes(UserRole.Admin)) {
+    if (get(currentUser)?.role !== UserRole.Admin) {
         redirect(302, '/');
     }
 };
