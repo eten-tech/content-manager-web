@@ -1,13 +1,12 @@
 import type { PageLoad } from './$types';
 import { redirect } from '@sveltejs/kit';
-import { currentUser } from '$lib/stores/auth';
-import { UserRole } from '$lib/types/base';
+import { Permission, userCan } from '$lib/stores/auth';
 import { get } from 'svelte/store';
 
 export const load: PageLoad = async ({ parent }) => {
     await parent();
 
-    if (get(currentUser)?.role !== UserRole.Admin) {
+    if (!get(userCan)(Permission.CreateApiKey)) {
         redirect(302, '/');
     }
 };

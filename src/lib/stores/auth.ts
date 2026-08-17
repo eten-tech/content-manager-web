@@ -48,6 +48,7 @@ export enum Permission {
     AssignContent = 'assign:content',
     AssignOutsideCompany = 'assign:outside-company',
     AssignOverride = 'assign:override',
+    CreateApiKey = 'create:apikey',
     CreateContent = 'create:content',
     CreateCommunityContent = 'create:community-content',
     CreateProject = 'create:project',
