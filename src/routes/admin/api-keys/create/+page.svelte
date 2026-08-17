@@ -66,6 +66,18 @@
         isCopied = true;
         setTimeout(() => (isCopied = false), 2000);
     }
+
+    function resetForm() {
+        scope = null;
+        organization = '';
+        contactName = '';
+        email = '';
+        phone = '';
+        useCase = '';
+        errorMessage = null;
+        createdApiKey = null;
+        isCopied = false;
+    }
 </script>
 
 <svelte:head>
@@ -86,6 +98,7 @@
                 <input readonly class="input input-bordered w-full" value={createdApiKey} />
                 <button class="btn btn-primary" onclick={copyApiKey}>{isCopied ? 'Copied!' : 'Copy'}</button>
             </div>
+            <button class="btn btn-link self-start px-0" onclick={resetForm}>Create another API key</button>
         </div>
     {:else}
         <div class="flex max-w-xl flex-col">
