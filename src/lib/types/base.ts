@@ -137,6 +137,15 @@ export interface Company {
     name: string;
 }
 
+export enum ApiKeyScope {
+    None = 'None',
+    All = 'All',
+    InternalApi = 'InternalApi',
+    PublicApi = 'PublicApi',
+    Admin = 'Admin',
+    WellApi = 'WellApi',
+}
+
 export interface TranslationPair {
     languageId: number;
     translationPairId: number;
