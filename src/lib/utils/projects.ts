@@ -31,6 +31,21 @@ export async function startProject(id: number | string | undefined) {
     await postToApi(`/projects/${id}/start`);
 }
 
+export interface RequeueProjectPreTranslationOptions {
+    shouldForceRetranslation: boolean;
+    shouldSkipCompanyLeadAssignment: boolean;
+    shouldSkipProjectStartedNotification: boolean;
+    /** Null or empty pre-translates the whole project. */
+    resourceContentIds: number[] | null;
+}
+
+export async function requeueProjectPreTranslation(
+    id: number | string | undefined,
+    options: RequeueProjectPreTranslationOptions
+) {
+    await postToApi(`/admin/projects/${id}/pre-translate`, { ...options });
+}
+
 export function formatCurrency(amount: number | string): string {
     const formatter = new Intl.NumberFormat('en-US', {
         style: 'currency',

@@ -86,7 +86,10 @@
             {projectResponse?.company} - {projectResponse?.name}
         </span>
     </div>
-    <div class="flex">
+    <div class="flex gap-2">
+        {#if $project?.started && $userCan(Permission.RequeuePreTranslationProject)}
+            <a class="btn btn-outline" href="/admin/projects/{$project.id}">Re-run Pre-Translation</a>
+        {/if}
         {#if $project?.started === null && $userCan(Permission.EditProjects)}
             <button class="btn btn-primary" disabled={!disabledStartButton} onclick={onStartProject}>Start</button>
         {:else}
