@@ -67,6 +67,7 @@ export enum Permission {
     ReadResourceLists = 'read:resource-lists',
     ReadUsers = 'read:users',
     ReadAllUsers = 'read:all-users',
+    RequeuePreTranslationProject = 'requeue-pre-translation:project',
     ReviewContent = 'review:content',
     SendReviewContent = 'send-review:content',
     SendReviewCommunityContent = 'send-review:community-content',
